@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 html, body {
-  @apply w-full h-full;
+  @apply w-full h-full bg-gray-900;
 }
