@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {getUpcomingMovies} from "../api/movies.ts";
 import MovieTile from "../components/MovieTile.tsx";
 import type {movieDb} from "../components/MovieTile.tsx";
+import MovieSearch from "../components/Search.tsx";
 
 
 export default function Root() {
@@ -29,6 +30,7 @@ export default function Root() {
         <>
             <div className="flex justify-center">
                 <div className="max-w-6xl">
+                    <MovieSearch />
                     <h1 className="text-3xl font-bold text-white pb-2">Movies</h1>
                     <div className="grid grid-cols-6 gap-4">
                         {movies.length && (movies.map((movie: movieDb) => (
