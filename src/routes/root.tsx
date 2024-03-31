@@ -6,21 +6,20 @@ import type {movieDb} from "../components/MovieTile.tsx";
 
 export default function Root() {
 
-    const [movies, setMovies] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [movies, setMovies] = useState<movieDb[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const data = await getUpcomingMovies()
                 setMovies(data.results);
-
             } finally {
                 setIsLoading(false);
             }
         };
         fetchData();
-    }, []);
+    }, [movies]);
 
     if (isLoading) {
         return <div>Loading...</div>;
