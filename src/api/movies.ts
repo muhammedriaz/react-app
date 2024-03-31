@@ -6,7 +6,7 @@ const options = {
 }
 
 
-async function getData(endpoint: string) {
+export async function getData(endpoint: string) {
     const response = await fetch(endpoint, options);
 
     if (!response.ok) {
