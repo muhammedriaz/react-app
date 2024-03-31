@@ -20,6 +20,6 @@ export async function getUpcomingMovies() {
     return await getData(`https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1`);
 }
 
-export async function getMovie(id: number) {
+export async function getMovie(id: string | undefined) {
     return await getData(`https://api.themoviedb.org/3/movie/${id}?language=en-US`);
 }
