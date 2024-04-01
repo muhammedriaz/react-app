@@ -26,19 +26,15 @@ export default function Root() {
         return <div>Loading...</div>;
     }
 
-    return (
-        <>
-            <div className="flex justify-center">
-                <div className="max-w-6xl">
-                    <MovieSearch />
-                    <h1 className="text-3xl font-bold text-white pb-2">Movies</h1>
-                    <div className="grid grid-cols-6 gap-4">
-                        {movies.length && (movies.map((movie: movieDb) => (
-                            <MovieTile data={movie}/>
-                        )))}
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="flex justify-center">
+        <div className="max-w-6xl">
+          <MovieSearch/>
+          <Title name="Movie"/>
+          <MovieGrid data={movies}/>
+        </div>
+      </div>
+    </>
+  );
 }
