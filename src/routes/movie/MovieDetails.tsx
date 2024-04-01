@@ -55,6 +55,7 @@ export default function MovieDetails() {
     return <div>Loading...</div>;
   }
 
+  const movieBackdropUrl = `https://media.themoviedb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`;
   return (
     <>
       <div className="flex p-5 w-full relative">
@@ -63,7 +64,7 @@ export default function MovieDetails() {
         }}></div>
         <div className="w-1/3 relative">
           <img className="w-100 h-100"
-               src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`} alt={movie.title}/>
+               src={movieBackdropUrl} alt={movie.title}/>
         </div>
         <div className="flex flex-col gap-6 w-2/3 pl-5 text-white relative">
           <div>
