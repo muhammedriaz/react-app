@@ -9,17 +9,17 @@ import MovieDetails from "./routes/movie/MovieDetails.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />
+    element: <Root/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "movie/:movieId",
-    element: <MovieDetails />,
+    element: <MovieDetails/>,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )
