@@ -11,7 +11,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-full h-full flex flex-col justify-center items-center text-gray-100">
       <h1 className="text-3xl font-bold">Error {error.status}!</h1>
       <p className="text-2xl">Page {error.statusText || error.message}</p>
     </div>
