@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import moment from "moment";
 import ImdbLogo from "../../assets/imdb.svg";
 import {getMovieTime} from "../../utils/helpers.ts";
+import CenterText from "../../components/CenterText.tsx";
 
 interface movieDetails {
   id: number;
@@ -52,7 +53,7 @@ export default function MovieDetails() {
   }, [movieId]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <CenterText text="Loading..." />;
   }
 
   const movieBackdropUrl = `https://media.themoviedb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`;

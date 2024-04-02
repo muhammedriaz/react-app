@@ -32,7 +32,7 @@ export default function Root() {
       <div className="flex justify-center">
         <div className="max-w-6xl">
           <MovieSearch/>
-          <Title name="Movie"/>
+          <Title name="Trending movies"/>
           <MovieGrid data={movies}/>
         </div>
       </div>

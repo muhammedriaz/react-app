@@ -17,7 +17,7 @@ export default function MovieTile({data}: { data: movieDb }) {
              src={moviePosterUrl}
              alt={data.title}/>
       </div>
-      <h3 className="text-sm text-white">{data.title}</h3>
+      <h3 className="text-sm text-white pt-2">{data.title}</h3>
       <h4 className="text-xs text-gray-300">{moment(data.release_date).format('LL').toString()}</h4>
     </Link>
   )
